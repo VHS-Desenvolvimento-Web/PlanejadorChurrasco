@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejador de Churrascos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <form class="planejador">
+        <h1>Planejador de Churrasco</h1>
+        <div class="calculadora">
+            <div class="input-numeros">
+                <div>
+                    <label for="numAdultosInput" class="label-bold">Quantidade de Adultos</label>
+                    <input type="number" id="numAdultosInput">
+                </div>
+
+                <div>
+                    <label for="numCriancasInput" class="label-bold">Quantidade de Crianças</label>
+                    <input type="number" id="numCriancasInput">
+                </div>
+
+                <div>
+                    <label for="numBebidasInput" class="label-bold">Qtd. de Bebidas (em Litros)</label>
+                    <input type="number" id="numBebidasInput">
+                </div>
+            </div>
+
+            <div class="input-radios">
+                <div class="opcoes">
+                    <label for="tiposCarne" class="label-bold">Tipos de Carne</label>
+                    <div class="radios" id="tiposCarne">
+                        <input type="checkbox" id="frango" name="consumo">
+                        <label for="frango">Frango</label>
+
+                        <input type="checkbox" id="porco" name="consumo">
+                        <label for="porco">Porco</label>
+
+                        <input type="checkbox" id="boi" name="consumo">
+                        <label for="boi">Boi</label>
+                    </div>
+                </div>
+
+                <div class="opcoes">
+                    <label for="consumo" class="label-bold">Nível de Consumo</label>
+                    <div class="radios" id="consumo">
+                        <input type="radio" id="leve" name="consumo">
+                        <label for="leve">Leve</label>
+
+                        <input type="radio" id="medio" name="consumo">
+                        <label for="medio">Médio</label>
+
+                        <input type="radio" id="esfomeados" name="consumo">
+                        <label for="esfomeados">Esfomeado</label>
+                    </div>
+                </div>
+
+                <div class="opcoes">
+                    <label for="alcoolicas" class="label-bold">Vai ter bebidas alcoólicas?</label>
+                    <div class="radios" id="alcoolicas">
+                        <input type="radio" id="alcoolSim" name="alcool">
+                        <label for="alcoolSim">Sim</label>
+
+                        <input type="radio" id="alcoolNao" name="alcool">
+                        <label for="alcoolNao">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tempos">
+                <div class="tempo">
+                    <label for="data" class="label-bold">Data do Evento</label>
+                    <input type="date" id="data">
+                </div>
+
+                <div class="tempo">
+                    <label for="horario" class="label-bold">Horário do Evento</label>
+                    <input type="time" id="horario">
+                </div>
+            </div>
+        </div>
+
+        <div class="resultados">
+            <div class="divisa">
+                <div class="resultado">
+                    <label for="carne" class="label-bold">Quantidade de Carne (em kg)</label>
+                    <p id="carne">2</p>
+                </div>
+                <div class="resultado">
+                    <label for="gelo" class="label-bold">Quantidade de Gelo (em kg)</label>
+                    <p id="gelo">2</p>
+                </div>
+                <div class="resultado">
+                    <label for="carvao" class="label-bold">Quantidade de Carvão (em kg)</label>
+                    <p id="carvao">2</p>
+                </div>
+            </div>
+            <input type="button" value="Imprimir" class="imprimir" id="imprimir">
+        </div>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

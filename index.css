@@ -1,0 +1,177 @@
+* {
+    font-family: 'Segoe UI';
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #e7e7e7;
+}
+
+.planejador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+.planejador h1 {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: 300px;
+    padding: 30px;
+    gap: 50px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    box-shadow: 0px 5px 0px #000;
+    background-color: #fff;
+}
+
+.label-bold {
+    width: 100%;
+    font-weight: bold;
+}
+
+.input-numeros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+.input-numeros input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-radios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.radios {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tempos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    gap: 30px;
+}
+
+.tempo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tempo input[type="date"],
+.tempo input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    height: fit-content;
+    padding: 30px;
+    gap: 30px;
+    border: 3px solid #000;
+    border-radius: 30px;
+    box-shadow: 0px 5px 0px #000;
+    background-color: #fff;
+}
+
+.divisa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.divisa p, .divisa label {
+    width: 100%;
+    text-align: left;
+}
+
+.imprimir {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+@media (max-width: 1024px) {
+    .calculadora {
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+        max-width: 400px;
+        width: 100%;
+        min-height: 800px;
+        height: 100%;
+    }
+
+    .resultados {
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        min-height: 400px;
+        height: 100%;
+    }
+
+    .divisa {
+        flex-direction: column;
+    }
+}
