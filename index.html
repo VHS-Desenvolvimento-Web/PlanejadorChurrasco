@@ -15,17 +15,17 @@
             <div class="input-numeros">
                 <div>
                     <label for="numAdultosInput" class="label-bold">Quantidade de Adultos</label>
-                    <input type="number" id="numAdultosInput">
+                    <input type="number" id="numAdultosInput" min="0" required>
                 </div>
 
                 <div>
                     <label for="numCriancasInput" class="label-bold">Quantidade de Crianças</label>
-                    <input type="number" id="numCriancasInput">
+                    <input type="number" id="numCriancasInput" min="0">
                 </div>
 
                 <div>
                     <label for="numBebidasInput" class="label-bold">Qtd. de Bebidas (em Litros)</label>
-                    <input type="number" id="numBebidasInput">
+                    <input type="number" id="numBebidasInput" min="0" required>
                 </div>
             </div>
 
@@ -33,39 +33,55 @@
                 <div class="opcoes">
                     <label for="tiposCarne" class="label-bold">Tipos de Carne</label>
                     <div class="radios" id="tiposCarne">
-                        <input type="checkbox" id="frango" name="consumo">
-                        <label for="frango">Frango</label>
+                        <div>
+                            <input type="checkbox" id="frango" name="carne">
+                            <label for="frango">Frango</label>
+                        </div>
 
-                        <input type="checkbox" id="porco" name="consumo">
-                        <label for="porco">Porco</label>
+                        <div>
+                            <input type="checkbox" id="porco" name="carne">
+                            <label for="porco">Porco</label>
+                        </div>
 
-                        <input type="checkbox" id="boi" name="consumo">
-                        <label for="boi">Boi</label>
+                        <div>
+                            <input type="checkbox" id="boi" name="carne">
+                            <label for="boi">Boi</label>
+                        </div>
                     </div>
                 </div>
 
                 <div class="opcoes">
                     <label for="consumo" class="label-bold">Nível de Consumo</label>
                     <div class="radios" id="consumo">
-                        <input type="radio" id="leve" name="consumo">
-                        <label for="leve">Leve</label>
+                        <div>
+                            <input type="radio" id="leve" name="consumo" checked>
+                            <label for="leve">Leve</label>
+                        </div>
 
-                        <input type="radio" id="medio" name="consumo">
-                        <label for="medio">Médio</label>
+                        <div>
+                            <input type="radio" id="medio" name="consumo">
+                            <label for="medio">Médio</label>
+                        </div>
 
-                        <input type="radio" id="esfomeados" name="consumo">
-                        <label for="esfomeados">Esfomeado</label>
+                        <div>
+                            <input type="radio" id="esfomeado" name="consumo">
+                            <label for="esfomeado">Esfomeado</label>
+                        </div>
                     </div>
                 </div>
 
                 <div class="opcoes">
                     <label for="alcoolicas" class="label-bold">Vai ter bebidas alcoólicas?</label>
                     <div class="radios" id="alcoolicas">
-                        <input type="radio" id="alcoolSim" name="alcool">
-                        <label for="alcoolSim">Sim</label>
+                        <div>
+                            <input type="radio" id="alcoolSim" name="alcool">
+                            <label for="alcoolSim">Sim</label>
+                        </div>
 
-                        <input type="radio" id="alcoolNao" name="alcool">
-                        <label for="alcoolNao">Não</label>
+                        <div>
+                            <input type="radio" id="alcoolNao" name="alcool">
+                            <label for="alcoolNao">Não</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -77,10 +93,15 @@
                 </div>
 
                 <div class="tempo">
-                    <label for="horario" class="label-bold">Horário do Evento</label>
-                    <input type="time" id="horario">
+                    <label for="duracao" class="label-bold">Duração do Evento</label>
+                    <input type="time" id="duracao">
                 </div>
             </div>
+        </div>
+
+        <div class="mensagem-submit">
+            <p class="aviso" id="aviso">Ola</p>
+            <input type="submit" onclick="validarCarne()" id="calcularBtn" class="calcular" value="Calcular">
         </div>
 
         <div class="resultados">
