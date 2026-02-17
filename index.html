@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form class="planejador">
+    <div class="planejador">
         <h1>Planejador de Churrasco</h1>
         <div class="calculadora">
             <div class="input-numeros">
@@ -94,34 +94,34 @@
 
                 <div class="tempo">
                     <label for="duracao" class="label-bold">Duração do Evento</label>
-                    <input type="time" id="duracao">
+                    <input type="time" id="duracao" required>
                 </div>
             </div>
         </div>
 
         <div class="mensagem-submit">
             <p class="aviso" id="aviso">Ola</p>
-            <input type="submit" onclick="validarCarne()" id="calcularBtn" class="calcular" value="Calcular">
+            <input type="submit" onclick="calcularPlanejamento()" id="calcularBtn" class="calcular">
         </div>
 
         <div class="resultados">
             <div class="divisa">
                 <div class="resultado">
                     <label for="carne" class="label-bold">Quantidade de Carne (em kg)</label>
-                    <p id="carne">2</p>
+                    <p id="carne">0</p>
                 </div>
                 <div class="resultado">
                     <label for="gelo" class="label-bold">Quantidade de Gelo (em kg)</label>
-                    <p id="gelo">2</p>
+                    <p id="gelo">0</p>
                 </div>
                 <div class="resultado">
                     <label for="carvao" class="label-bold">Quantidade de Carvão (em kg)</label>
-                    <p id="carvao">2</p>
+                    <p id="carvao">0</p>
                 </div>
             </div>
             <input type="button" value="Imprimir" class="imprimir" id="imprimir">
         </div>
-    </form>
+    </div>
 
     <script src="index.js"></script>
 </body>

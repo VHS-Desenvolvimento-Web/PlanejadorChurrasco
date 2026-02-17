@@ -118,7 +118,7 @@ body {
     gap: 30px;
 }
 
-.mensagem-submit p {
+.aviso {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +129,17 @@ body {
     background-color: #fff;
 }
 
-.mensagem-submit input {
+.aviso.erro {
+    background-color: #af2828;
+    color: #fff;
+    font-weight: bold;
+}
+
+.mensagem-submit .calcular {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     padding: 10px;
     border: 3px solid #000;
