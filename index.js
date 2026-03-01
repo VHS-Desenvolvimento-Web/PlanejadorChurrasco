@@ -18,6 +18,8 @@ function calcularPessoas() {
     return pessoas
 }
 
+// arrumar as bebidas, tem que calcular pelo numero de pessoas, e nao pelo input
+
 function validarCarne() {
     if (calcularPessoas() < 2) {
         mensagemAviso.textContent = 'Adicione mais adultos ao churrasco.'
@@ -39,7 +41,7 @@ function calcularCarne() {
     } else if (fomeAlta.checked) {
         carneGramas = pessoas * 600
     }
-    return carneGramas
+    return carneGramas.toFixed(1)
 }
 
 function validarGelo() {
@@ -54,16 +56,18 @@ function validarGelo() {
 
 function calcularGelo() {
     let gelo = inputBebidas.value / 4
-    return gelo
+    return gelo.toFixed(3)
 }
 
 function calcularCarvao() {
     let carvao = calcularCarne() * 1.15
-    return carvao
+    return carvao.toFixed(1)
 }
 
 function calcularPlanejamento() {
     if (!validarCarne() || !validarGelo() || !calcularDuracao()) { return }
+    mensagemAviso.textContent = '...'
+    mensagemAviso.classList.remove('erro')
     outputCarne.textContent = calcularCarne()
     outputGelo.textContent = calcularGelo()
     outputCarvao.textContent = calcularCarvao()
@@ -72,8 +76,8 @@ function calcularPlanejamento() {
 function calcularDuracao() {
     const duracao = inputDuracao.value
     if (duracao === '00:00' || !duracao) {
-        mensagemAviso.textContent = 'Preencha a duração do evento.'
         mensagemAviso.classList.add('erro')
+        mensagemAviso.textContent = 'Preencha a duração do evento.'
         return false
     } else if (duracao < '04:00') {
         return true
